@@ -136,5 +136,40 @@ For \( \hat{\tau} \) to reflect the **true causal effect**:
 ---
 
 ## 🚀 Improvements (TBD)
-_Add suggestions for model or code enhancements here._
+### 🏠 Add a Welcome Route
+
+You can just add a little welcome route like this:
+
+```python
+@app.route("/", methods=["GET"])
+def home():
+    return "👋 Hello! Flask API is running. Use POST /predict to get predictions."
+```
+
+Now if you visit `http://localhost:5000/`, instead of a 404, you’ll see your welcome message.
+
+---
+
+### 🔄 Step-by-Step: Sync Codespace with Latest Changes
+
+1. Open a terminal in your Codespace.
+
+2. **Check the current branch**:
+
+    ```bash
+    git branch
+    ```
+
+    Make sure you're on the `main` branch (or the one where the change was pushed).
+
+3. **Pull the latest changes**:
+
+    ```bash
+    git pull origin main
+    ```
+
+    This will fetch the latest updates from GitHub into your Codespace.
+
+4. **Verify the file**:  
+   After the pull, open `app.py` again — you should now see your changes.
 
