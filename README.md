@@ -51,10 +51,30 @@ After running, you may see a browser pop-up — this is expected. Just ignore th
 
 ### Test with `curl`
 
+### 🧪 Running & Testing the Flask App
+
+#### 🖥️ Terminal 1 — Start the Flask App
+
 ```bash
-curl -X POST http://127.0.0.1:5000/predict \
+python app.py
+```
+
+Leave this running.
+
+---
+
+#### 🖥️ Terminal 2 — Send a Prediction Request
+
+```bash
+curl -X POST http://0.0.0.0:5000/predict \
      -H "Content-Type: application/json" \
-     -d '{"W": 1, "X": 10}'
+     -d '{"W": 1, "X": 20}'
+```
+
+#### ✅ Expected Output
+
+```json
+{"predicted_engagement": 117.59}
 ```
 
 ---
