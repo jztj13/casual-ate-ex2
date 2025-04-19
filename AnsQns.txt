@@ -1,0 +1,3 @@
+app.py is a Flask application that loads the trained regression model and exposes a /predict endpoint, which returns stakeholder engagement score predictions based on input values. The Dockerfile defines a lightweight, consistent environment to run the app with all required dependencies. Containerization ensures that the application behaves the same across different machines and platforms, improving reproducibility, collaboration, and deployment.
+Report the predicted engagement score ˆ Yi returned by your API: 117.16
+More details refer to README file, thanks
