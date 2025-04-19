@@ -6,6 +6,10 @@ app = Flask(__name__)
 with open("model_params.json", "r") as f:
     params = json.load(f)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "👋 Hello! Flask API is running. Use POST /predict to get predictions."
+
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json()
